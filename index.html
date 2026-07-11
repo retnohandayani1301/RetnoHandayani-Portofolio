@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Retno Handayani — RH Finds | AI-Assisted Digital Creator</title>
+<meta name="description" content="Retno Handayani — Copywriter, Ebook Writer & AI-Assisted Digital Creator. Founder of RH Finds, a trusted digital bookstore for creators & freelancers.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --cream:#F7F1E6;
+    --ivory:#FBF8F2;
+    --charcoal:#1C1712;
+    --charcoal-2:#241E17;
+    --gold:#B8894F;
+    --gold-light:#D6B679;
+    --blush:#D9B3A0;
+    --ink:#2A2420;
+    --ink-soft:#5C5248;
+    --line:rgba(184,137,79,0.28);
+    --radius:2px;
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  @media (prefers-reduced-motion: reduce){
+    html{scroll-behavior:auto;}
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
+
+  body{
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+
+  h1,h2,h3{
+    font-family:'Cormorant Garamond', serif;
+    font-weight:600;
+    color:var(--ink);
+    line-height:1.15;
+  }
+
+  .eyebrow{
+    font-family:'Jost', sans-serif;
+    font-size:0.72rem;
+    letter-spacing:0.22em;
+    text-transform:uppercase;
+    color:var(--gold);
+    font-weight:500;
+    display:inline-block;
+    margin-bottom:14px;
+  }
+
+  .container{
+    max-width:1140px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--gold);
+    outline-offset:3px;
+  }
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed; top:0; left:0; right:0;
+    z-index:100;
+    background:rgba(247,241,230,0.92);
+    backdrop-filter:blur(8px);
+    border-bottom:1px solid var(--line);
+  }
+  .nav-inner{
+    max-width:1140px; margin:0 auto; padding:16px 28px;
+    display:flex; align-items:center; justify-content:space-between;
+  }
+  .logo{
+    display:flex; align-items:center; gap:10px;
+    font-family:'Cormorant Garamond', serif;
+    font-size:1.3rem; font-weight:600; letter-spacing:0.02em;
+  }
+  .logo-mark{
+    width:36px; height:36px; border-radius:50%;
+    border:1.5px solid var(--gold);
+    display:flex; align-items:center; justify-content:center;
+    font-size:0.85rem; color:var(--gold); font-weight:600;
+    flex-shrink:0;
+  }
+  nav.links{display:flex; gap:34px; align-items:center;}
+  nav.links a{
+    font-size:0.85rem; letter-spacing:0.03em; color:var(--ink-soft);
+    transition:color 0.2s ease;
+  }
+  nav.links a:hover{color:var(--gold);}
+  .nav-cta{
+    background:var(--charcoal); color:var(--gold-light) !important;
+    padding:10px 22px; border-radius:var(--radius);
+    font-size:0.8rem !important; letter-spacing:0.05em;
+    border:1px solid var(--charcoal);
+    transition:background 0.2s ease, color 0.2s ease;
+  }
+  .nav-cta:hover{background:var(--gold); color:var(--charcoal) !important; border-color:var(--gold);}
+  .menu-toggle{display:none; background:none; border:none; cursor:pointer; padding:6px;}
+  .menu-toggle span{display:block; width:22px; height:1.5px; background:var(--ink); margin:5px 0;}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    padding:168px 0 100px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; top:-10%; right:-8%;
+    width:520px; height:520px;
+    background:radial-gradient(circle, rgba(184,137,79,0.16) 0%, rgba(184,137,79,0) 70%);
+    pointer-events:none;
+  }
+  .hero-grid{
+    display:grid; grid-template-columns:1.15fr 0.85fr;
+    gap:64px; align-items:center;
+    position:relative;
+  }
+  .hero-eyebrow-row{display:flex; align-items:center; gap:12px; margin-bottom:20px;}
+  .hero-eyebrow-row .rule{width:36px; height:1px; background:var(--gold);}
+  .hero h1{
+    font-size:clamp(2.6rem, 5vw, 4rem);
+    margin-bottom:20px;
+  }
+  .hero h1 em{
+    font-style:italic; color:var(--gold);
+  }
+  .hero-role{
+    font-family:'Jost', sans-serif; font-size:1rem; color:var(--ink-soft);
+    letter-spacing:0.02em; margin-bottom:26px;
+  }
+  .hero-role span{color:var(--gold); font-weight:500;}
+  .hero p.lede{
+    font-size:1.05rem; color:var(--ink-soft); max-width:520px; margin-bottom:36px;
+  }
+  .cta-row{display:flex; flex-wrap:wrap; gap:14px;}
+  .btn{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:14px 28px; font-size:0.85rem; letter-spacing:0.04em;
+    border-radius:var(--radius); transition:all 0.25s ease;
+    border:1px solid transparent;
+  }
+  .btn-primary{background:var(--charcoal); color:var(--gold-light);}
+  .btn-primary:hover{background:var(--gold); color:var(--charcoal);}
+  .btn-outline{border-color:var(--gold); color:var(--ink);}
+  .btn-outline:hover{background:var(--gold); color:var(--charcoal); border-color:var(--gold);}
+
+  .hero-photo-wrap{
+    position:relative;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .hero-photo-ring{
+    position:relative;
+    width:100%; max-width:380px; aspect-ratio:1/1;
+    border-radius:50%;
+    padding:14px;
+    border:1px solid var(--gold);
+  }
+  .hero-photo-ring::after{
+    content:""; position:absolute; inset:-14px;
+    border:1px solid rgba(184,137,79,0.35); border-radius:50%;
+  }
+  .hero-photo-ring img{
+    width:100%; height:100%; object-fit:cover; border-radius:50%;
+  }
+  .hero-badge{
+    position:absolute; bottom:6px; right:0px;
+    background:var(--charcoal); color:var(--gold-light);
+    padding:10px 16px; border-radius:50px;
+    font-size:0.72rem; letter-spacing:0.05em;
+    display:flex; align-items:center; gap:8px;
+    border:1px solid var(--gold);
+  }
+  .hero-badge .dot{width:6px; height:6px; border-radius:50%; background:#8FBF87;}
+
+  /* ---------- SECTION SHARED ---------- */
+  section{padding:96px 0;}
+  .section-head{max-width:640px; margin-bottom:56px;}
+  .section-head h2{font-size:clamp(1.9rem, 3.2vw, 2.6rem);}
+  .section-head p{color:var(--ink-soft); margin-top:14px; font-size:1rem;}
+  .divider{height:1px; background:var(--line); width:100%;}
+
+  /* ---------- ABOUT ---------- */
+  .about-grid{
+    display:grid; grid-template-columns:0.85fr 1.15fr; gap:56px; align-items:flex-start;
+  }
+  .about-quote{
+    font-family:'Cormorant Garamond', serif; font-style:italic;
+    font-size:1.5rem; color:var(--ink); line-height:1.4;
+    border-left:2px solid var(--gold); padding-left:24px;
+  }
+  .about-body p{color:var(--ink-soft); margin-bottom:18px; font-size:0.98rem;}
+  .about-body strong{color:var(--ink); font-weight:500;}
+  .stat-row{display:flex; gap:40px; margin-top:32px; flex-wrap:wrap;}
+  .stat{}
+  .stat .num{font-family:'Cormorant Garamond', serif; font-size:2.1rem; color:var(--gold); font-weight:600;}
+  .stat .label{font-size:0.78rem; letter-spacing:0.04em; color:var(--ink-soft); text-transform:uppercase;}
+
+  /* ---------- SERVICES ---------- */
+  .services{background:var(--ivory); border-top:1px solid var(--line); border-bottom:1px solid var(--line);}
+  .service-grid{
+    display:grid; grid-template-columns:repeat(5, 1fr); gap:0;
+    border-top:1px solid var(--line); border-left:1px solid var(--line);
+  }
+  .service-card{
+    padding:34px 24px; border-right:1px solid var(--line); border-bottom:1px solid var(--line);
+    transition:background 0.25s ease;
+  }
+  .service-card:hover{background:var(--cream);}
+  .service-icon{font-size:1.5rem; margin-bottom:16px; display:block;}
+  .service-card h3{font-size:1.15rem; margin-bottom:10px; font-weight:600;}
+  .service-card p{font-size:0.82rem; color:var(--ink-soft); margin-bottom:14px; line-height:1.55;}
+  .service-tags{display:flex; flex-wrap:wrap; gap:6px;}
+  .service-tags span{
+    font-size:0.68rem; color:var(--gold); border:1px solid var(--line);
+    padding:3px 9px; border-radius:20px; letter-spacing:0.02em;
+  }
+
+  /* ---------- PORTFOLIO ---------- */
+  .portfolio-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:28px;
+  }
+  .book-card{
+    background:var(--ivory); border:1px solid var(--line); border-radius:var(--radius);
+    overflow:hidden; transition:transform 0.25s ease, box-shadow 0.25s ease;
+  }
+  .book-card:hover{transform:translateY(-4px); box-shadow:0 16px 32px -20px rgba(28,23,18,0.35);}
+  .book-spine{
+    height:8px; background:linear-gradient(90deg, var(--gold), var(--blush));
+  }
+  .book-content{padding:26px 24px 28px;}
+  .book-tag{font-size:0.68rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; display:block;}
+  .book-content h3{font-size:1.25rem; margin-bottom:10px; line-height:1.3;}
+  .book-content p{font-size:0.85rem; color:var(--ink-soft); margin-bottom:16px;}
+  .book-link{font-size:0.78rem; color:var(--ink); border-bottom:1px solid var(--gold); padding-bottom:2px;}
+  .book-link:hover{color:var(--gold);}
+
+  /* ---------- SKILLS ---------- */
+  .skills-grid{display:grid; grid-template-columns:repeat(4, 1fr); gap:36px;}
+  .skill-col h3{font-size:1.05rem; margin-bottom:16px; color:var(--gold); font-weight:600;}
+  .skill-col ul{list-style:none;}
+  .skill-col li{
+    font-size:0.88rem; color:var(--ink-soft); padding:8px 0;
+    border-bottom:1px solid var(--line);
+  }
+
+  /* ---------- FEEDBACK / HONEST SECTION ---------- */
+  .feedback{
+    background:var(--ivory); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+  }
+  .feedback-box{
+    text-align:center; max-width:600px; margin:0 auto;
+    padding:52px 40px; border:1px dashed var(--gold); border-radius:var(--radius);
+    background:var(--cream);
+  }
+  .feedback-box .eyebrow{margin-bottom:18px;}
+  .feedback-box h3{font-size:1.5rem; margin-bottom:14px;}
+  .feedback-box p{color:var(--ink-soft); font-size:0.92rem; margin-bottom:22px;}
+
+  /* ---------- CONTACT / FOOTER ---------- */
+  .contact{
+    background:var(--charcoal); color:var(--cream);
+  }
+  .contact .section-head h2{color:var(--cream);}
+  .contact .section-head p{color:rgba(247,241,230,0.65);}
+  .contact-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:40px;
+  }
+  .contact-links{display:flex; flex-direction:column; gap:16px;}
+  .contact-link{
+    display:flex; align-items:center; gap:14px;
+    padding:16px 20px; border:1px solid rgba(184,137,79,0.4); border-radius:var(--radius);
+    transition:border-color 0.2s ease, background 0.2s ease;
+  }
+  .contact-link:hover{border-color:var(--gold); background:rgba(184,137,79,0.08);}
+  .contact-link .ic{font-size:1.1rem;}
+  .contact-link .txt small{display:block; font-size:0.68rem; letter-spacing:0.06em; text-transform:uppercase; color:var(--gold-light); margin-bottom:3px;}
+  .contact-link .txt strong{font-weight:400; font-size:0.92rem; color:var(--cream);}
+  .contact-note{
+    font-family:'Cormorant Garamond', serif; font-style:italic; font-size:1.3rem;
+    color:var(--gold-light); line-height:1.5; padding:24px; border-left:2px solid var(--gold);
+  }
+  .status-pill{
+    display:inline-flex; align-items:center; gap:8px;
+    font-size:0.78rem; color:#8FBF87; margin-top:24px;
+  }
+  .status-pill .dot{width:7px; height:7px; border-radius:50%; background:#8FBF87;}
+
+  footer{
+    background:var(--charcoal-2); padding:28px 0; border-top:1px solid rgba(184,137,79,0.2);
+  }
+  .footer-inner{
+    display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:12px;
+  }
+  .footer-inner p{font-size:0.78rem; color:rgba(247,241,230,0.5);}
+  .footer-inner .flinks{display:flex; gap:20px;}
+  .footer-inner .flinks a{font-size:0.78rem; color:rgba(247,241,230,0.6);}
+  .footer-inner .flinks a:hover{color:var(--gold-light);}
+
+  /* ---------- RESPONSIVE ---------- */
+  @media (max-width:900px){
+    .hero-grid{grid-template-columns:1fr; gap:48px;}
+    .hero{padding:140px 0 72px;}
+    .hero-photo-wrap{order:-1;}
+    .hero-photo-ring{max-width:240px;}
+    .about-grid{grid-template-columns:1fr;}
+    .service-grid{grid-template-columns:repeat(2,1fr);}
+    .service-card:nth-child(2n){border-right:1px solid var(--line);}
+    .portfolio-grid{grid-template-columns:repeat(2,1fr);}
+    .skills-grid{grid-template-columns:repeat(2,1fr);}
+    .contact-grid{grid-template-columns:1fr;}
+    nav.links{
+      position:fixed; top:65px; left:0; right:0; background:var(--cream);
+      flex-direction:column; padding:24px 28px; gap:20px;
+      border-bottom:1px solid var(--line);
+      transform:translateY(-150%); transition:transform 0.3s ease;
+    }
+    nav.links.open{transform:translateY(0);}
+    .menu-toggle{display:block;}
+  }
+  @media (max-width:600px){
+    .service-grid{grid-template-columns:1fr;}
+    .service-card{border-right:1px solid var(--line) !important;}
+    .portfolio-grid{grid-template-columns:1fr;}
+    .skills-grid{grid-template-columns:1fr 1fr;}
+    section{padding:64px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-inner">
+    <a href="#top" class="logo">
+      <span class="logo-mark">RH</span>
+      Retno Handayani
+    </a>
+    <nav class="links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#skills">Skills</a>
+      <a href="https://wa.me/qr/TEEW3EZA2PJGJ1" class="nav-cta">Let's Talk →</a>
+    </nav>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="hero-eyebrow-row">
+          <span class="rule"></span>
+          <span class="eyebrow">AI-Assisted Digital Creator · Indonesia</span>
+        </div>
+        <h1>Words that sell.<br>Products that <em>work</em>.</h1>
+        <p class="hero-role">Copywriter <span>·</span> Ebook Writer <span>·</span> Founder of <span>RH Finds</span></p>
+        <p class="lede">I write and build the things digital brands actually need to sell — persuasive copy, ghostwritten ebooks, and content that doesn't just sound good, but performs. Everything here has already been tested on my own store first.</p>
+        <div class="cta-row">
+          <a href="https://wa.me/qr/TEEW3EZA2PJGJ1" class="btn btn-primary">💬 Let's Work Together</a>
+          <a href="https://winme.id/rh-finds1" class="btn btn-outline">🛍️ View My Store</a>
+        </div>
+      </div>
+      <div class="hero-photo-wrap">
+        <div class="hero-photo-ring">
+          <img src="assets/retno-profile.jpg" alt="Portrait of Retno Handayani">
+        </div>
+        <div class="hero-badge"><span class="dot"></span> Open to Projects</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="container"><div class="divider"></div></div>
+
+  <!-- ABOUT -->
+  <section id="about">
+    <div class="container about-grid">
+      <div>
+        <span class="eyebrow">About</span>
+        <p class="about-quote">"Sharing what actually works — not just what sounds good."</p>
+      </div>
+      <div class="about-body">
+        <p>I'm <strong>Retno Handayani</strong>, an AI-Assisted Digital Creator based in Indonesia. I write and build the things digital brands actually need to sell: scroll-stopping captions, persuasive copy, ghostwritten ebooks, and ready-to-sell digital products.</p>
+        <p>I run my own digital bookstore, <strong>RH Finds</strong> — a growing catalog of guides on AI tools, freelancing, and digital marketing, published on Winme.id and Lynk.id. Every skill I offer clients started as something I tested on my own brand first, from cover to copy to launch.</p>
+        <p>I combine sharp copywriting instincts with a modern AI workflow (Claude, ChatGPT, and design tools) to move fast without cutting corners. I'm certified in <strong>Claude 101</strong> and <strong>AI Fluency for Small Businesses</strong> through Anthropic Academy, and I apply that fluency to everything I write.</p>
+        <div class="stat-row">
+          <div class="stat"><div class="num">13+</div><div class="label">Digital Titles Published</div></div>
+          <div class="stat"><div class="num">2</div><div class="label">Active Storefronts</div></div>
+          <div class="stat"><div class="num">5</div><div class="label">Core Services</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">What I Do</span>
+        <h2>Services that move people to act</h2>
+        <p>From content creation to full digital product packages — crafted with strategy, creativity, and AI precision.</p>
+      </div>
+    </div>
+    <div class="container">
+      <div class="service-grid">
+        <div class="service-card">
+          <span class="service-icon">✍️</span>
+          <h3>Content Creation</h3>
+          <p>Engaging content for social platforms — from scroll-stopping captions to full video scripts.</p>
+          <div class="service-tags"><span>TikTok</span><span>Scripts</span><span>Ebooks</span></div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🎯</span>
+          <h3>Copywriting</h3>
+          <p>Persuasive copy designed to convert visitors into buyers and followers into fans.</p>
+          <div class="service-tags"><span>Sales Pages</span><span>Email</span><span>CTAs</span></div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🎨</span>
+          <h3>Visual Design</h3>
+          <p>Eye-catching visuals powered by AI tools — thumbnails, branding, brand identity.</p>
+          <div class="service-tags"><span>AI Design</span><span>Branding</span></div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">🌐</span>
+          <h3>Website</h3>
+          <p>Clean, conversion-focused landing pages — fast, responsive, professionally built.</p>
+          <div class="service-tags"><span>Landing Pages</span><span>Portfolios</span></div>
+        </div>
+        <div class="service-card">
+          <span class="service-icon">📦</span>
+          <h3>Digital Products</h3>
+          <p>Ready-to-sell digital goods — ebooks, templates, and prompt packs.</p>
+          <div class="service-tags"><span>Ebooks</span><span>Templates</span><span>Prompts</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">RH Finds Catalog</span>
+        <h2>A few titles from the shelf</h2>
+        <p>Every product below is written, structured, and published by me — live and for sale today.</p>
+      </div>
+      <div class="portfolio-grid">
+
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div class="book-content">
+            <span class="book-tag">Ebook · AI Tools</span>
+            <h3>Claude AI: Panduan Lengkap untuk Pemula</h3>
+            <p>A complete beginner's guide to using Claude AI — practical, easy to follow, 2026 edition.</p>
+            <a href="https://winme.id/rh-finds1" class="book-link">View in store →</a>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div class="book-content">
+            <span class="book-tag">Ebook · Productivity</span>
+            <h3>Gunakan Claude Sebagai Asisten Kerja 24 Jam</h3>
+            <p>A practical guide to turning Claude into a round-the-clock work assistant for real productivity gains.</p>
+            <a href="https://winme.id/rh-finds1" class="book-link">View in store →</a>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div class="book-content">
+            <span class="book-tag">Ebook · Monetization</span>
+            <h3>Side Income dari AI</h3>
+            <p>7 income models, a 90-day roadmap, and 3+ bonuses for monetizing AI skills from zero.</p>
+            <a href="https://winme.id/rh-finds1" class="book-link">View in store →</a>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div class="book-content">
+            <span class="book-tag">Ebook Series</span>
+            <h3>Mama Bisa Digital (Vol. 1 & 2)</h3>
+            <p>A digital-skills series for stay-at-home mothers — from Canva basics to CapCut editing, zero experience needed.</p>
+            <a href="https://winme.id/rh-finds1" class="book-link">View in store →</a>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div class="book-content">
+            <span class="book-tag">Ebook · Freelancing</span>
+            <h3>Panduan Lengkap Upwork</h3>
+            <p>A step-by-step guide from profile setup to first payment — built for Indonesian freelancers going global.</p>
+            <a href="https://lynk.id/retnohandayani1301" class="book-link">View in store →</a>
+          </div>
+        </div>
+
+        <div class="book-card">
+          <div class="book-spine"></div>
+          <div class="book-content">
+            <span class="book-tag">Video Template</span>
+            <h3>CapCut Creator Template</h3>
+            <p>A ready-to-use, trending short-form video template built for creators on TikTok & Reels.</p>
+            <a href="https://mobile.capcutshare.com/sv2/ZSx6MtxHy/" class="book-link">View template →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" style="background:var(--ivory); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Toolkit</span>
+        <h2>Skills & tools I work with</h2>
+      </div>
+      <div class="skills-grid">
+        <div class="skill-col">
+          <h3>Writing</h3>
+          <ul>
+            <li>Persuasive copywriting</li>
+            <li>Ghostwriting</li>
+            <li>Content strategy</li>
+            <li>SEO-aware writing</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>AI Tools</h3>
+          <ul>
+            <li>Claude — Academy certified</li>
+            <li>ChatGPT</li>
+            <li>AI visual/design tools</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Content & Video</h3>
+          <ul>
+            <li>CapCut</li>
+            <li>DaVinci Resolve</li>
+            <li>TikTok & Instagram production</li>
+          </ul>
+        </div>
+        <div class="skill-col">
+          <h3>Platforms</h3>
+          <ul>
+            <li>Lynk.id & Winme.id</li>
+            <li>Upwork</li>
+            <li>HTML + Vercel deployment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HONEST FEEDBACK SECTION -->
+  <section class="feedback">
+    <div class="container">
+      <div class="feedback-box">
+        <span class="eyebrow">Client Stories</span>
+        <h3>Building this section, one project at a time.</h3>
+        <p>I'm early in my client work, so this space is intentionally honest: no testimonials yet. What I can offer instead is a live catalog of published, working products — proof I finish what I start. If we work together, you could be the first story here.</p>
+        <a href="https://wa.me/qr/TEEW3EZA2PJGJ1" class="btn btn-outline">Start the first one →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow" style="color:var(--gold-light);">Open to Projects</span>
+        <h2>Let's create something that works</h2>
+        <p>Need a compelling sales page, an ebook ghostwritten, or a full content strategy? I'm one message away.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-links">
+          <a class="contact-link" href="https://wa.me/qr/TEEW3EZA2PJGJ1">
+            <span class="ic">💬</span>
+            <span class="txt"><small>WhatsApp</small><strong>Chat for Projects</strong></span>
+          </a>
+          <a class="contact-link" href="https://winme.id/rh-finds1">
+            <span class="ic">🛍️</span>
+            <span class="txt"><small>Digital Store</small><strong>winme.id/rh-finds1</strong></span>
+          </a>
+          <a class="contact-link" href="https://lynk.id/retnohandayani1301">
+            <span class="ic">🔗</span>
+            <span class="txt"><small>All Links</small><strong>lynk.id/retnohandayani1301</strong></span>
+          </a>
+          <a class="contact-link" href="https://www.tiktok.com/@bitbelle01">
+            <span class="ic">🎵</span>
+            <span class="txt"><small>TikTok</small><strong>@bitbelle01</strong></span>
+          </a>
+          <div class="status-pill"><span class="dot"></span> Currently open to new projects</div>
+        </div>
+        <div>
+          <p class="contact-note">"A better future begins with one small decision today: choosing to never stop learning."</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container footer-inner">
+    <p>© 2026 Retno Handayani · RH Finds · Indonesia</p>
+    <div class="flinks">
+      <a href="https://winme.id/rh-finds1">Store</a>
+      <a href="https://lynk.id/retnohandayani1301">Links</a>
+      <a href="https://www.tiktok.com/@bitbelle01">TikTok</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const toggle = document.getElementById('menuToggle');
+  const links = document.getElementById('navLinks');
+  toggle.addEventListener('click', () => {
+    const isOpen = links.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  }));
+</script>
+
+</body>
+</html>
